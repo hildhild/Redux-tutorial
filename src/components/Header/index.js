@@ -14,9 +14,17 @@ function Header({page}) {
                 <div className='w-[40px] h-[40px] rounded-full border-solid border-[1px] grid place-content-center cursor-pointer mr-[10px] hover:bg-black hover:text-white'>
                     <FontAwesomeIcon icon={faBell}/>
                 </div>
-                <Link to='/profile' className='w-[45px] h-[45px] rounded-full border-solid border-[1px] grid place-content-center cursor-pointer mr-[10px] hover:bg-black hover:text-white'>
-                    <FontAwesomeIcon icon={faUser}/>
-                </Link>
+                {
+                    page === "Profile"
+                    ?
+                    <Link to='/profile' className='w-[45px] h-[45px] rounded-full border-solid border-[1px] grid place-content-center cursor-pointer mr-[10px] bg-black text-white'>
+                        <FontAwesomeIcon icon={faUser}/>
+                    </Link>
+                    :
+                    <Link to='/profile' className='w-[45px] h-[45px] rounded-full border-solid border-[1px] grid place-content-center cursor-pointer mr-[10px] hover:bg-black hover:text-white'>
+                        <FontAwesomeIcon icon={faUser}/>
+                    </Link>
+                }
             </div>
 
         </div> 

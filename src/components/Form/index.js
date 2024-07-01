@@ -34,28 +34,27 @@ function Form({ onFormSubmit }) {
     };
     
     return (
-      <div className="px-[15px] border-r-[1px] border-solid">
-        <div className='text-3xl text-[red] text-center mb-[20px] py-[20px] font-semibold'>ĐĂNG KÝ THÔNG TIN</div>
+      <div className="px-[15px]">
         <form onSubmit={handleSubmit} className=''>
             <div>
-                <div className='font-semibold mb-[10px]'>Họ và tên:</div>
-                <input disabled={submitted} className='mb-[20px] w-full border-[1px] border-solid px-[15px] py-[5px] rounded-xl' type="text" name="name" value={name} onChange={handleInputChange} placeholder="Nhập họ và tên..."/>
+                <div className='font-semibold mb-[10px]'>Name:</div>
+                <input disabled={submitted} className='mb-[20px] w-full border-[1px] border-solid px-[15px] py-[5px] rounded-xl' type="text" name="name" value={name} onChange={handleInputChange} placeholder="Enter your name..."/>
             </div>
             <div>
-                <div className='font-semibold mb-[10px]'>Tuổi:</div>
-                <input disabled={submitted} className='mb-[20px] w-full border-[1px] border-solid px-[15px] py-[5px] rounded-xl' type="number" name="age" value={age} onChange={handleInputChange} placeholder="Nhập tuổi..."/>
+                <div className='font-semibold mb-[10px]'>Age:</div>
+                <input disabled={submitted} className='mb-[20px] w-full border-[1px] border-solid px-[15px] py-[5px] rounded-xl' type="number" name="age" value={age} onChange={handleInputChange} placeholder="Enter your age..."/>
             </div><div>
-                <div className='font-semibold mb-[10px]'>Số điện thoại:</div>
-                <input disabled={submitted} className='mb-[20px] w-full border-[1px] border-solid px-[15px] py-[5px] rounded-xl' type="text" name="phone" value={phone} onChange={handleInputChange} placeholder="Nhập số điện thoại..."/>
+                <div className='font-semibold mb-[10px]'>Phone:</div>
+                <input disabled={submitted} className='mb-[20px] w-full border-[1px] border-solid px-[15px] py-[5px] rounded-xl' type="text" name="phone" value={phone} onChange={handleInputChange} placeholder="Enter your phone..."/>
             </div><div>
                 <div className='font-semibold mb-[10px]'>Email:</div>
-                <input disabled={submitted} className='mb-[20px] w-full border-[1px] border-solid px-[15px] py-[5px] rounded-xl' type="email" name="email" value={email} onChange={handleInputChange} placeholder="Nhập email ..."/>
+                <input disabled={submitted} className='mb-[20px] w-full border-[1px] border-solid px-[15px] py-[5px] rounded-xl' type="email" name="email" value={email} onChange={handleInputChange} placeholder="Enter your email..."/>
             </div>
             <div>
-                <div className='font-semibold mb-[10px]'>Ghi chú:</div>
-                <textarea disabled={submitted} className='mb-[50px] w-full border-[1px] border-solid px-[15px] py-[5px] rounded-xl' placeholder="Nhập ghi chú..." name='note' value={note} onChange={handleInputChange}></textarea>
+                <div className='font-semibold mb-[10px]'>Note:</div>
+                <textarea disabled={submitted} className='mb-[50px] w-full border-[1px] border-solid px-[15px] py-[5px] rounded-xl' placeholder="Enter note..." name='note' value={note} onChange={handleInputChange}></textarea>
             </div>
-            <input type="submit" value="ĐĂNG KÝ" className="bg-[blue] text-[white] w-full cursor-pointer py-[10px] rounded-xl mb-[20px]" />
+            <input type="submit" value="SAVE" className="bg-[#232323] text-[#FDFDFD] w-full cursor-pointer py-[10px] rounded-xl mb-[20px] hover:bg-[#383838] hover:text-white" />
         </form>
       </div>
     );

@@ -1,21 +1,26 @@
 import React, { useState } from 'react';
 import Header from "../../components/Header";
 import Form from "../../components/Form";
-import Info from "../../components/Info";
+import { useDispatch } from 'react-redux';
+import dashboardSlice from './dashboardSlice';
+
 
 function Dashboard() {
+    const dispatch = useDispatch();
+
     const [formData, setFormData] = useState(null);
 
     const handleFormSubmit = (data) => {
         setFormData(data);
+        dispatch(dashboardSlice.actions.formSubmit(data));
+        alert("Save successfully!")
     };
 
     return (
         <div>
             <Header page='Dashboard'/>
-            <div className="grid grid-cols-2 h-full px-[20px]">
+            <div className="px-[20px]">
                 <Form onFormSubmit={handleFormSubmit}></Form>
-                {formData && <Info data={formData} />}
             </div>
         </div> 
     );
