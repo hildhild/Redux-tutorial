@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 export default createSlice({
-    name: "dashboard",
+    name: "form",
     initialState: {
         formData : {
             name: '',

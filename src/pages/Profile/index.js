@@ -1,7 +1,6 @@
 import Header from "../../components/Header";
 import Info from "../../components/Info";
 import { useSelector } from "react-redux";
-// import { formDataSelector } from "../../redux/selectors";
 
 function Profile() {
     const formData = useSelector(state => state.dashboard.formData);

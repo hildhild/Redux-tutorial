@@ -1,9 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
-import dashboardSlice from '../pages/Dashboard/dashboardSlice';
+import formSlice from '../components/Form/formSlice';
+import successModalSlice from '../components/SuccessModal/successModalSlice';
 
 const store = configureStore({
     reducer: {
-        dashboard: dashboardSlice.reducer
+        dashboard: formSlice.reducer,
+        successModal: successModalSlice.reducer
     },
 });
 
