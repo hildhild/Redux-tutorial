@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/react'
-import { ExclamationTriangleIcon } from '@heroicons/react/24/outline'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCircleCheck } from '@fortawesome/free-regular-svg-icons'
 import { useDispatch } from 'react-redux';
 import successModalSlice from './successModalSlice';
 import { useSelector } from 'react-redux';
@@ -33,7 +34,7 @@ export default function SuccessModal() {
                 <div className="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
                 <div className="flex items-center">
                     <div className="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-[#59B259] sm:mx-0 sm:h-10 sm:w-10">
-                    <ExclamationTriangleIcon className="h-6 w-6 text-white" aria-hidden="true" />
+                    <FontAwesomeIcon icon={faCircleCheck} className='h-6 w-6 text-white'/>
                     </div>
                     <div className="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
                     <DialogTitle as="h3" className="text-base font-semibold text-center text-[#232323]">
