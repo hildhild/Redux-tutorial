@@ -3,7 +3,7 @@ import { Dialog, DialogBackdrop, DialogPanel, DialogTitle } from '@headlessui/re
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircleCheck } from '@fortawesome/free-regular-svg-icons'
 import { useDispatch } from 'react-redux';
-import successModalSlice from './successModalSlice';
+import successModalSlice from '../../redux/slices/SuccessModal/successModalSlice';
 import { useSelector } from 'react-redux';
 
 export default function SuccessModal() {

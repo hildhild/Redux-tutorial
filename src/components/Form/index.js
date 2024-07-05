@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import formSlice from './formSlice';
-import successModalSlice from '../SuccessModal/successModalSlice';
+import formSlice from '../../redux/slices/Form/formSlice';
+import successModalSlice from '../../redux/slices/SuccessModal/successModalSlice';
 import { useSelector } from "react-redux";
 
 function Form() {
