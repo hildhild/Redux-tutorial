@@ -6,8 +6,11 @@ export default createSlice({
         openModal : false
     },
     reducers: {
-        openModal: (state, action) => {
-            state.openModal = action.payload;
+        openModal: (state) => {
+            state.openModal = true;
+        },
+        closeModal: (state) => {
+            state.openModal = false;
         }
     }
 });

@@ -41,13 +41,13 @@ function Form() {
         } else if (field === 'note') {
             setNote(value);
         }
-      };
+    };
     
     const handleSubmit = (event) => {
         event.preventDefault(); //Ngăn chặn hành vi mặc định (load lại trang)
         const formData = { name, age, phone, email, note };
         setFormData(formData);
-        dispatch(successModalSlice.actions.openModal(true));
+        dispatch(successModalSlice.actions.openModal());
         dispatch(formSlice.actions.formSubmit(formData));
     };
 
